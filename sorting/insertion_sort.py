@@ -1,15 +1,19 @@
+
 def insertion_sort(lst):
-    n = len(lst)
-    for i in range(1, n):
-        val = lst[i]
+    #take first element as sorted subarray
+    # then get an element from the remaining list and place in subarray
+    for i in range(len(lst)):
         j = i - 1
-        while j >= 0 and val < lst[j]:
+        val = lst[i]
+        while j >= 0 and lst[j] > val:
             lst[j+1] = lst[j]
-            j = j - 1
+            j -= 1
         lst[j+1] = val
+    return lst
+        
 
 
-# lst = [0, 10, 20, -1, 2, 3]
-lst = [-1, -2, -3, -50, -100, -1000]
-insertion_sort(lst)
-print(lst)
+
+
+lst = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
+print(insertion_sort(lst))
