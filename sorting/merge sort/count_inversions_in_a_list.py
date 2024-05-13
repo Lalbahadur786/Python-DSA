@@ -14,6 +14,7 @@ def merge(a, l, mid, r):
         else:
             a[k] = right[j]
             res += len(left) - i
+            
             j += 1
             k += 1
     while i < m:
