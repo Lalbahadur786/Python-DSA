@@ -4,6 +4,7 @@ from collections import deque
 # insert front, insert rear, delete front, delete rear
 
 d = deque()
+print(len(d))
 d.append(10)
 d.append(10)
 d.append(30)
@@ -16,3 +17,16 @@ d.rotate(2)
 print(d) # deque([25, 32, 6, 5, 10, 10, 30])
 d.popleft()
 print(d) # deque([32, 6, 5, 10, 10, 30])
+
+lst = list(d)
+del lst[0:1]
+
+print(lst)
+d = deque(lst)
+print(d)
+
+list.insert()
+
+    
+
+    
